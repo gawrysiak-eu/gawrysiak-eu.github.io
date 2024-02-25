@@ -165,13 +165,22 @@ p {
   padding: 30px;
   list-style-position: inside;
   border-radius: 20px;
-  box-shadow: 0 0 10px #364155;
+  box-shadow: 0 0 5px #364155;
 }
+
 .skills-box-hard {
   background-color: #364155;
   color: white;
   padding: 50px;
   list-style-position: inside;
   border-radius: 20px;
-  box-shadow: 0 0 10px #364155;
+  box-shadow: 0 0 5px #364155;
 }
+/* 
+.skills-box:hover {
+  box-shadow: 0 0 20px #364155;
+}
+
+.skills-box-hard:hover {
+  box-shadow: 0 0 20px #364155;
+} */
