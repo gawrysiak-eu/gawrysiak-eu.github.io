@@ -1,38 +1,33 @@
-
 body {
-    font-family: arial;
-    /* background-color: aliceblue; */
-    background-color: #364155;
-    padding: 40px 0;
+  font-family: arial;
+  /* background-color: aliceblue; */
+  background-color: #364155;
+  padding: 40px 0;
 }
 
-
 H3 {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 H2 {
-    font-size: 28px;
-
+  font-size: 28px;
 }
 
 H1 {
-    font-size: 36px;
-    margin-bottom: 10px;
+  font-size: 36px;
+  margin-bottom: 10px;
 }
 
 span {
-    color: gray;
+  color: gray;
 }
 
 .container {
-    
-    box-shadow: 0 0 20px gray;
-    width: 960px;
-    margin: 0 auto;
-    background-color: white; 
-    /* white bo zrobiliśmy tło strony w kolorze a section i header też pokazywało na niebiesko bo domyślnie były przezroczyste */
-  
+  box-shadow: 0 0 20px gray;
+  width: 960px;
+  margin: 0 auto;
+  background-color: white;
+  /* white bo zrobiliśmy tło strony w kolorze a section i header też pokazywało na niebiesko bo domyślnie były przezroczyste */
 }
 
 /* img {
@@ -40,114 +35,108 @@ span {
     height: 180px;
 } */
 
-section, header {
-    padding: 10px 60px 10px 60px;
-    color: #364155;
-   
+section,
+header {
+  padding: 10px 60px 10px 60px;
+  color: #364155;
 }
 
 header {
-    display: flex; 
-    /* wyświetla poziomo obok siebie  */
-    align-items: center;
-    /* centruje góra dół w tej sekcji */
-    justify-content: space-between;
-    /* robi równe odstępy między zdjęciem, nazwiskiem i adresem */
-    padding-top: 50px;
-    /* odsuwa nasz cały header w dół */
+  display: flex;
+  /* wyświetla poziomo obok siebie  */
+  align-items: center;
+  /* centruje góra dół w tej sekcji */
+  justify-content: space-between;
+  /* robi równe odstępy między zdjęciem, nazwiskiem i adresem */
+  padding-top: 50px;
+  /* odsuwa nasz cały header w dół */
 }
-
 
 /* tak wybierzemy tylko te tagi co są w headerze */
 header ul {
-    list-style: none;
-    font-size: 14px;
-
-
+  list-style: none;
+  font-size: 14px;
 }
 
 /* header li { */
-    li {
-    margin-bottom: 15px;
+li {
+  margin-bottom: 15px;
 }
 
 /* header address img { */
-.address-icon {    
-    width: 16px;
-    height: 16px;
-    background-color: #364155;
-    /* margin dodaje odstęp między ikoną a tekstem */
-    margin-right: 10px;
-    /* padding robi w koło ikonki tło */
-    padding: 7px;
-    vertical-align: middle;
-    
+.address-icon {
+  width: 16px;
+  height: 16px;
+  background-color: #364155;
+  /* margin dodaje odstęp między ikoną a tekstem */
+  margin-right: 10px;
+  /* padding robi w koło ikonki tło */
+  padding: 7px;
+  vertical-align: middle;
 }
 
 .circle {
-/* radius zaokrągla padding w koło ikony */
-border-radius: 50%;
+  /* radius zaokrągla padding w koło ikony */
+  border-radius: 50%;
 }
 
 .profile-picture {
-    width: 180px;
-    height: 180px;
-    box-shadow: 0 0 20px #364155;
+  width: 180px;
+  height: 180px;
+  box-shadow: 0 0 20px #364155;
 }
 
 .hobbies {
-    list-style: none;
-    padding: 0px;
-    display: flex;
-    /* flex ustawia hobby obok siebie */
-    flex-wrap: wrap;
-    /* wrap bo domyślnie upchnie 4  linii a my tego nie chcemy, niech zawija i najwyżej zrobi dwa wiersze */
-
+  list-style: none;
+  padding: 0px;
+  display: flex;
+  /* flex ustawia hobby obok siebie */
+  flex-wrap: wrap;
+  /* wrap bo domyślnie upchnie 4  linii a my tego nie chcemy, niech zawija i najwyżej zrobi dwa wiersze */
 }
 
 .hobbies li {
-    width: 50%;
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 40px;
+  width: 50%;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
 }
 
 .hobbies div {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .hobbies p {
-    color: gray;
+  color: gray;
 }
 
 p {
-    line-height: 1.5;
+  line-height: 1.5;
 }
 
 .cv-download-link {
-    border: 2px solid #364155;
-    color: black;
-    text-decoration: none;
-    padding: 10px 20px;
-    display: inline-block;
-    margin-top: 20px;
-    border-radius: 26px;
-    /* powolna zmiana koloru przy zmianie tła spowodowanej najechaniem */
-    transition: background-color 0.5s, color 05s;
-    box-shadow: 0 0 20px #364155;
+  border: 2px solid #364155;
+  color: black;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: inline-block;
+  margin-top: 20px;
+  border-radius: 26px;
+  /* powolna zmiana koloru przy zmianie tła spowodowanej najechaniem */
+  transition: background-color 0.5s, color 05s;
+  box-shadow: 0 0 20px #364155;
 }
 
 .cv-download-link:hover {
-    color: white;
-    background-color: #364155;
+  color: white;
+  background-color: #364155;
 }
-
 
 /* po przejściu tabem żeby nie pokazywała się brzydka ramka w koło przycisku */
 .cv-download-link:focus {
-    outline: none;
-    color: white;
-    background-color: #364155;
+  outline: none;
+  color: white;
+  background-color: #364155;
 }
 
 .cv-download-link:active {
@@ -155,9 +144,34 @@ p {
 }
 
 .surname {
-    margin-left: 6px;
+  margin-left: 6px;
 }
 
-.address-data{
-    padding: 0;
+.address-data {
+  padding: 0;
+}
+
+.skills-class {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+}
+
+.skills-box {
+  background-color: #364155;
+  color: white;
+  padding: 30px;
+  list-style-position: inside;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #364155;
+}
+.skills-box-hard {
+  background-color: #364155;
+  color: white;
+  padding: 50px;
+  list-style-position: inside;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #364155;
 }
