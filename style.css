@@ -81,8 +81,8 @@ li {
 }
 
 .profile-picture {
-  width: 180px;
-  height: 180px;
+  width: 150px;
+  height: 150px;
   box-shadow: 0 0 20px #364155;
 }
 
@@ -151,6 +151,10 @@ p {
   padding: 0;
 }
 
+.address-data li:hover {
+  transform: scale(1.1);
+}
+
 .skills-class {
   display: flex;
   flex-wrap: wrap;
@@ -168,6 +172,10 @@ p {
   box-shadow: 0 0 5px #364155;
 }
 
+.skills-box:hover {
+  transform: scale(1.1);
+}
+
 .skills-box-hard {
   background-color: #364155;
   color: white;
@@ -175,6 +183,9 @@ p {
   list-style-position: inside;
   border-radius: 20px;
   box-shadow: 0 0 5px #364155;
+}
+.skills-box-hard:hover {
+  transform: scale(1.1);
 }
 /* 
 .skills-box:hover {
@@ -184,3 +195,7 @@ p {
 .skills-box-hard:hover {
   box-shadow: 0 0 20px #364155;
 } */
+
+img:hover {
+  transform: scale(1.5);
+}
