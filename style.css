@@ -1,201 +1,302 @@
+/* General Styles */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --background-color: #ecf0f1;
+    --text-color: #34495e;
+    --white: #ffffff;
+    --container-padding: 20px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-  font-family: arial;
-  /* background-color: aliceblue; */
-  background-color: #364155;
-  padding: 40px 0;
-}
-
-H3 {
-  margin-top: 5px;
-}
-
-H2 {
-  font-size: 28px;
-}
-
-H1 {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-
-span {
-  color: gray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 .container {
-  box-shadow: 0 0 20px gray;
-  width: 960px;
-  margin: 0 auto;
-  background-color: white;
-  /* white bo zrobiliśmy tło strony w kolorze a section i header też pokazywało na niebiesko bo domyślnie były przezroczyste */
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 var(--container-padding);
 }
 
-/* img {
-    width: 180px;
-    height: 180px;
-} */
+h1, h2, h3 {
+    font-weight: 600;
+}
 
-section,
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+}
+
+section {
+    padding: 60px 0;
+}
+
+/* Navigation */
+nav {
+    background: var(--white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+nav .nav-links li {
+    margin-left: 25px;
+}
+
+nav .nav-links a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Header */
 header {
-  padding: 10px 60px 10px 60px;
-  color: #364155;
+    background: var(--white);
+    padding-top: 120px;
+    padding-bottom: 60px;
 }
 
-header {
-  display: flex;
-  /* wyświetla poziomo obok siebie  */
-  align-items: center;
-  /* centruje góra dół w tej sekcji */
-  justify-content: space-between;
-  /* robi równe odstępy między zdjęciem, nazwiskiem i adresem */
-  padding-top: 50px;
-  /* odsuwa nasz cały header w dół */
+.header-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: 40px;
 }
 
-/* tak wybierzemy tylko te tagi co są w headerze */
-header ul {
-  list-style: none;
-  font-size: 14px;
+.header-text h1 {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
 }
 
-/* header li { */
-li {
-  margin-bottom: 15px;
+.header-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
 }
 
-/* header address img { */
-.address-icon {
-  width: 16px;
-  height: 16px;
-  background-color: #364155;
-  /* margin dodaje odstęp między ikoną a tekstem */
-  margin-right: 10px;
-  /* padding robi w koło ikonki tło */
-  padding: 7px;
-  vertical-align: middle;
+.header-image img {
+    max-width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.circle {
-  /* radius zaokrągla padding w koło ikony */
-  border-radius: 50%;
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s ease;
 }
 
-.profile-picture {
-  width: 150px;
-  height: 150px;
-  box-shadow: 0 0 20px #364155;
+.btn:hover {
+    background: #2980b9;
 }
 
-.hobbies {
-  list-style: none;
-  padding: 0px;
-  display: flex;
-  /* flex ustawia hobby obok siebie */
-  flex-wrap: wrap;
-  /* wrap bo domyślnie upchnie 4  linii a my tego nie chcemy, niech zawija i najwyżej zrobi dwa wiersze */
+/* About Section */
+#about {
+    background: var(--white);
 }
 
-.hobbies li {
-  width: 50%;
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 40px;
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
 }
 
-.hobbies div {
-  margin-left: 20px;
+.skill {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-.hobbies p {
-  color: gray;
+.skill h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
 }
 
-p {
-  line-height: 1.5;
+.skill ul {
+    list-style: none;
 }
 
-.cv-download-link {
-  border: 2px solid #364155;
-  color: black;
-  text-decoration: none;
-  padding: 10px 20px;
-  display: inline-block;
-  margin-top: 20px;
-  border-radius: 26px;
-  /* powolna zmiana koloru przy zmianie tła spowodowanej najechaniem */
-  transition: background-color 0.5s, color 05s;
-  box-shadow: 0 0 20px #364155;
+.skill li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
 }
 
-.cv-download-link:hover {
-  color: white;
-  background-color: #364155;
+.skill li:before {
+    content: '\f00c';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: var(--primary-color);
 }
 
-/* po przejściu tabem żeby nie pokazywała się brzydka ramka w koło przycisku */
-.cv-download-link:focus {
-  outline: none;
-  color: white;
-  background-color: #364155;
+/* Experience Section */
+#experience {
+    background: var(--white);
 }
 
-.cv-download-link:active {
-  text-decoration: underline;
+.experience-item {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ddd;
 }
 
-.surname {
-  margin-left: 6px;
+.experience-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
-.address-data {
-  padding: 0;
+.experience-item h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
 }
 
-.address-data li:hover {
-  transform: scale(1.1);
+.experience-item p {
+    margin: 5px 0;
 }
 
-.skills-class {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  list-style: none;
-  padding: 0;
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
 }
 
-.skills-box {
-  background-color: #364155;
-  color: white;
-  padding: 30px;
-  list-style-position: inside;
-  border-radius: 20px;
-  box-shadow: 0 0 5px #364155;
+.project {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
 }
 
-.skills-box:hover {
-  transform: scale(1.1);
+.project h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
 }
 
-.skills-box-hard {
-  background-color: #364155;
-  color: white;
-  padding: 50px;
-  list-style-position: inside;
-  border-radius: 20px;
-  box-shadow: 0 0 5px #364155;
-}
-.skills-box-hard:hover {
-  transform: scale(1.1);
-}
-/* 
-.skills-box:hover {
-  box-shadow: 0 0 20px #364155;
+.project p {
+    margin-bottom: 15px;
+    flex-grow: 1;
 }
 
-.skills-box-hard:hover {
-  box-shadow: 0 0 20px #364155;
-} */
+.project a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 10px;
+}
 
-img:hover {
-  transform: scale(1.5);
+/* Contact Section */
+#contact {
+    background: var(--white);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.contact-item {
+    text-align: center;
+}
+
+.contact-item i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.contact-item a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    background: var(--secondary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    nav .container {
+        flex-direction: column;
+    }
+
+    nav .nav-links {
+        margin-top: 15px;
+    }
+
+    nav .nav-links li {
+        margin: 0 10px;
+    }
+
+    .header-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .header-image {
+        grid-row: 1;
+        margin-bottom: 20px;
+    }
+
+    .skills-grid, .projects-grid, .contact-grid {
+        grid-template-columns: 1fr;
+    }
 }
